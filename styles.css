@@ -1,0 +1,76 @@
+main {
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}
+
+body {
+    background-color: #68b0ab;
+}
+
+.calc-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.calc-div {
+   width: 23rem;
+   background-color: #c8d5b9;
+   padding: 20px 30px;
+}
+
+.calc-screen {
+    background-color: #faf3dd;
+    padding: 10px 10px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    border: 1.5px solid black;
+    border-radius: 3px;
+}
+
+.calc-input, .calc-memory {
+    min-height: 20px;
+}
+
+.buttons-div {
+    display: grid;
+    grid-template-areas:
+    'clear clear delete divide'
+    'seven eight nine multiply'
+    'four five six minus'
+    'one two three plus'
+    'zero negative decimal equals';
+    grid-gap: 10px;
+    height: 350px;
+    grid-template-columns:  auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    
+}
+
+.buttons-div button {
+    font-size: 17px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: #faf3dd;
+}
+
+.buttons-div button:hover {
+    cursor: pointer;
+    background-color: #efe8d3;
+}
+
+.btn-clear {
+    grid-area: clear;
+}
+
+
+.calc-screen p {
+    text-align: right;
+}
+
+@media only screen and (max-width: 979px) {
+    .calc-div {
+        width: 75%;
+    }
+}
