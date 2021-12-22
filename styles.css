@@ -22,11 +22,15 @@ body {
 
 .calc-screen {
     background-color: #faf3dd;
-    padding: 10px 10px;
+    padding: 5px 10px;
     margin-bottom: 25px;
     margin-top: 15px;
     border: 1.5px solid black;
     border-radius: 3px;
+}
+
+.calc-input {
+    font-size: 24px;
 }
 
 .calc-input, .calc-memory {
@@ -71,6 +75,6 @@ body {
 
 @media only screen and (max-width: 979px) {
     .calc-div {
-        width: 75%;
+        width: 80%;
     }
 }

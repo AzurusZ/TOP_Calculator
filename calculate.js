@@ -62,7 +62,7 @@ function prepCalculation() {
         return;
     }
     if (resetScreen) return;
-    let answer = calculate(firstNum, lastOp, secondNum);
+    let answer = roundNumber(calculate(firstNum, lastOp, secondNum), 6);
     input_screen.textContent = answer;
     resetScreen = true;
 }
@@ -81,6 +81,10 @@ function compute() {
     memory_screen.textContent += " " + secondNum + " " + "=";
     lastOp = "";
 
+}
+
+function roundNumber(num, decimalPlaces) {
+    return Number(Math.round(num + "e" + decimalPlaces) + "e-" + decimalPlaces);
 }
 
 function addDecimal() {
